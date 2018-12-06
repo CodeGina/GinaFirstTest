@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人信息</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+		<style>
+			.container {
+				margin-top: 20px;
+			}
+			
+			.info-wapper {
+				/*margin: 24px auto 24px 40px;*/
+				margin: 0 auto;
+			}
+			
+			.info-box label {
+				width: 120px;
+				line-height: 20px;
+				padding: 20px 0;
+				text-align: center;
+				background-color: #f3f5f7;
+				color: #07111b;
+				font-weight: 700;
+			}
+			
+			.info-box div {
+				width: 708px;
+				margin-left: 8px;
+				line-height: 20px;
+				padding: 20px 0 20px 22px;
+				border-bottom: 1px solid #d9dde1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container" id="student_information">
+			<div class="info-wapper">
+				<div class="info-box clearfix">
+					<label class="pull-left">学号</label>
+					<div class="pull-left">{{sno}}</div>
+				</div>
+			</div>
+			<div class="info-wapper">
+				<div class="info-box clearfix">
+					<label class="pull-left">姓名</label>
+					<div class="pull-left">{{sname}}</div>
+				</div>
+			</div>
+			<div class="info-wapper">
+				<div class="info-box clearfix">
+					<label class="pull-left">性别</label>
+					<div class="pull-left">{{ssex}}</div>
+				</div>
+			</div>
+			<div class="info-wapper">
+				<div class="info-box clearfix">
+					<label class="pull-left">出生日期</label>
+					<div class="pull-left">{{sbirth}}</div>
+				</div>
+			</div>
+			<div class="info-wapper">
+				<div class="info-box clearfix">
+					<label class="pull-left">系别</label>
+					<div class="pull-left">{{dname}}</div>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/jquery.cookie.js"></script>
+		<script src="../lib/vue.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/student_information.js"></script>
+	</body>
+
+</html>

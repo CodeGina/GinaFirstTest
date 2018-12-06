@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="lib/jQuery-spqh/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css" />
+		<style type="text/css">
+			.overflow {
+				height: 100vh;
+				overflow: hidden;
+			}
+			
+			.panels__side--inner-left,
+			.panels__side--inner-right,
+			.panels__side--inner {
+				padding: 0 5vw;
+				height: 100vh;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="overflow">
+			<section class="panels">
+				<article class="panels__side panels__side--left">
+					<div class="panels__side panels__side--inner-left">
+						<!--begin of 表单-->
+						<div class="container">
+							<div class="row clearfix">
+								<div class="col-md-12 column">
+									<form class="form-horizontal" role="form" method="post" action="#">
+										<div class="form-group">
+											<label for="teacher_number" class="col-sm-5 control-label"><font class="h4">工号</font></label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control" id="teacher_number" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="teacher_password" class="col-sm-5 control-label"><font class="h4">密码</font></label>
+											<div class="col-sm-6">
+												<input type="password" class="form-control" id="teacher_password" />
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<div class="col-sm-offset-5 col-sm-6 text-center">
+												<button type="reset" class="btn btn-danger">重置</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												<button type="button" class="btn btn-success" onclick="teacher_login()">登录</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<!--end of 表单-->
+					</div>
+					<div class="panels__side panels__side--inner" id="panels_side_left_title">
+						<h1 class="panels__headline">教师登录</h1>
+						<svg class="arrow arrow--left" width="40" height="40" viewBox="0 0 24 24">
+							<path d="M0 0h24v24h-24z" fill="none" />
+							<path d="M20 11h-12.17l5.59-5.59-1.42-1.41-8 8 8 8 1.41-1.41-5.58-5.59h12.17v-2z" />
+						</svg>
+					</div>
+				</article>
+				<article class="panels__side panels__side--right">
+					<div class="panels__side panels__side--inner" id="panels_side_right_title">
+						<h1 class="panels__headline">学生登录</h1>
+						<svg class="arrow arrow--right" width="40" height="40" viewBox="0 0 24 24">
+							<path d="M0 0h24v24h-24z" fill="none" />
+							<path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z" />
+						</svg>
+					</div>
+					<div class="panels__side panels__side--inner-right">
+						<!--begin of 表单-->
+						<div class="container">
+							<div class="row clearfix">
+								<div class="col-md-12 column">
+									<form class="form-horizontal" role="form" method="post" action="#">
+										<div class="form-group">
+											<label for="student_number" class="col-sm-2 control-label"><font class="h4">学号</font></label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control" id="student_number" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="student_password" class="col-sm-2 control-label"><font class="h4">密码</font></label>
+											<div class="col-sm-6">
+												<input type="password" class="form-control" id="student_password" />
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<div class="col-sm-offset-2 col-sm-6 text-center">
+												<button type="reset" class="btn btn-danger">重置</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												<button type="button" class="btn btn-success" onclick="student_login()">登录</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<!--end of 表单-->
+					</div>
+				</article>
+			</section>
+		</div>
+
+		<script src="lib/jQuery-spqh/js/jquery-1.11.0.min.js"></script>
+		<script src="lib/jquery.cookie.js"></script>
+		<script src="lib/jQuery-spqh/js/modernizr.js"></script>
+		<script src="lib/jQuery-spqh/js/index.js"></script>
+		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+		<script src="lib/bootstrap/js/bootstrap.js"></script>
+		<script src="js/login.js"></script>
+	</body>
+
+</html>

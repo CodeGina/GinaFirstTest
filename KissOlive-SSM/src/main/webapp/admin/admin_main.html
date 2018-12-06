@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>管理员首页</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/bTabs/b.tabs.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" href="../css/admin/admin_main.css" />
+		<script>
+			// var height = $(window).height();
+		</script>
+		<style>
+			body {
+				height: 1500px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!--start of 头部-->
+		<header id="header">
+			<div class="container">
+				<img class="icon" src="../img/header_title.png" />
+				<span class="header_title">管理员</span>
+				<a class="header_title pull-right" style="color: #888; font-size: 14px; cursor: pointer" onclick="log_off()">注销</a>
+			</div>
+		</header>
+		<!--end of 头部-->
+
+		<!--start of 侧边栏-->
+		<nav class="main_menu">
+
+			<div class="main_menu_left">
+				<!--头像-->
+				<div class="logo">
+					<img src="../img/logo.jpg" />
+				</div>
+				<!--导航栏-->
+				<div id="menuSideBar">
+					<ul id="menuSideBar1">
+						<li mid="tab1" funurl="term.html" id="term">
+							<a tabindex="-1" href="javascript:void(0);">学期信息</a>
+						</li>
+						<li mid="tab2" funurl="department.html" id="department">
+							<a tabindex="-1" href="javascript:void(0);">院系信息</a>
+						</li>
+						<li mid="tab3" funurl="teacher.html" id="teacher">
+							<a href="#">教师信息</a>
+						</li>
+						<li mid="tab4" funurl="student.html" id="student">
+							<a href="#">学生信息</a>
+						</li>
+						<li mid="tab5" funurl="start_lesson.html" id="start">
+							<a tabindex="-1" href="javascript:void(0);">发起开课</a>
+						</li>
+						<li mid="tab6" funurl="auditing.html" id="auditing">
+							<a tabindex="-1" href="javascript:void(0);">审核开课</a>
+						</li>
+						<li mid="tab7" funurl="course_selection.html" id="course_selection">
+							<a href="#">发起选课</a>
+						</li>
+						<li mid="tab8" funurl="release_result.html" id="score">
+							<a href="#">发布结果</a>
+						</li>
+						<li mid="tab9" funurl="chang_password.html" id="chang_password">
+							<a href="#">修改密码</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!--标签区域-->
+			<div id="mainFrameTabs" class="main_menu_right">
+				<!-- Nav tabs 首页-->
+				<div class="tablayout">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active noclose" style="flex-basis:75px">
+							<a href="#bTabs_navTabsMainPage" data-toggle="tab" title="首页">首页
+							</a>
+					</ul>
+					<button type="button" class="allTabsCloseBtn" title="关闭全部选项卡" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true"><i class="fa fa-trash-o "></i></span>
+					</button>
+				</div>
+
+				<!-- Tab panes -->
+				<!-- 默认标签页（首页）的内容区域 -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="bTabs_navTabsMainPage">
+						<iframe frameborder="0" scrolling="yes" src="test.html"></iframe>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!--end of 侧边栏-->
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script src="../lib/jquery.cookie.js"></script>
+		<script src="../lib/bTabs/b.tabs.js"></script>
+		<script src="js/admin_main.js"></script>
+		<script src="../lib/jquery-ui.min.js"></script>
+	</body>
+
+</html>

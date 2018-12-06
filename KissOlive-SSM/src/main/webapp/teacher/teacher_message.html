@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>消息查看</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+		<style>
+			.container {
+				width: 100%;
+				padding-top: 20px;
+			}
+			.list {
+				width: 100%;
+			}
+			
+			.list ul {
+				
+			}
+			.list ul li {
+				position: relative;
+				line-height: 20px;
+				padding: 20px 0 20px 22px;
+				border-bottom: 1px solid #d9dde1;
+			}
+			.list ul li a {
+				position: absolute;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<p>不要错过重要消息通知噢</p>
+			<div class="list" id="msgList">
+				<ul v-for="(data, index) in datas">
+					<li>
+						<span style="display: inline-block;width: 150px">{{data.title}}</span>
+						<span style="color: #888;">{{data.content}}</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/vue.js"></script>
+		<script src="../lib/jquery.cookie.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script src="js/teacher_message.js"></script>
+	</body>
+
+</html>

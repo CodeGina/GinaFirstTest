@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>课程评分</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<style>
+			.container {
+				width: 100%;
+			}
+			
+			table {
+				table-layout: fixed; //固定布局的算法，默认是auto，是基于表格内容的自动布局算法
+				width: 100%;
+			}
+			/* 针对下面这些伪类选择符如果你使用的浏览器不支持，可以直接写在列的style里*/
+			
+			td:first-child {
+				width: 20%;
+			}
+			
+			td:nth-child(2) {
+				width: 20%;
+			}
+			
+			td:last-child {
+				width: 60%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<table class="table" id="list">
+				<tr class="info">
+					<th>课程编号</th>
+					<th>课程名</th>
+					<th>学期</th>
+					<th>操作</th>
+				</tr>
+				<tr v-cloak v-for="(data, index) in datas">
+					<td>{{data.cno}}</td>
+					<td>{{data.cname}}</td>
+					<td>{{data.cterm}}</td>
+					<td>
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#score" onclick="entryGrade(this)">
+ 							评分
+						</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="score" tabindex="-1" role="dialog" aria-labelledby="title" data-backdrop='static'>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="title">成绩录入</h4>
+					</div>
+					<div class="modal-body">
+						<table class="table" id="student_list">
+							<tr>
+								<th>学号</th>
+								<th>姓名</th>
+								<th>成绩</th>
+							</tr>
+							<tr v-for="(data, index) in datas">
+								<td>{{data.sno}}</td>
+								<td>{{data.sname}}</td>
+								<td>
+									<input type="text" class="form-control" v-model="data.value">
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-success" data-dismiss="modal" @click="submiton()">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/vue.js"></script>
+		<script src="../lib/jquery.cookie.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script src="js/teacher_score.js"></script>
+	</body>
+
+</html>

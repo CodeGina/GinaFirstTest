@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>发布开课通知</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+	</head>
+	<body>
+	<div class="container" style="margin-top: 50px;">
+		<form class="form-horizontal" method="post" action="#">
+			<div class="form-group">
+				<label for="title" class="col-sm-2 control-label">标题</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="title"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="content" class="col-sm-2 control-label">内容</label>
+				<div class="col-sm-6">
+					<textarea name="notice_content" rows="4" id="content" class="form-control"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="reset" class="btn btn-default">重置</button>
+					<button type="button" class="btn btn-primary" onclick="publish()">发布</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="../lib/jquery.js"></script>
+	<script src="../lib/vue.js"></script>
+	<script src="../lib/bootstrap/js/bootstrap.js"></script>
+	<script src="js/admin_start_lesson.js"></script>
+	</body>
+
+</html>

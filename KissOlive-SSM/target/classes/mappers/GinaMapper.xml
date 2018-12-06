@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.xgun.kissolive.dao.GinaMapper" >
+    <insert id="insertManager" parameterType="org.xgun.kissolive.pojo.Manager">
+      insert tb_manager(mno,mname,mpwd) values (#{mno}, #{mname}, #{mpwd})
+    </insert>
+
+    <select id="selectManagerByMnoAndMpwd" resultType="org.xgun.kissolive.pojo.Manager" parameterType="org.xgun.kissolive.pojo.Manager">
+        select mno, mname, mpwd
+        from tb_manager
+        where mno = #{mno} and mpwd = #{mpwd}
+    </select>
+
+    <select id="selectTeacherByTnoAndTpwd" resultType="org.xgun.kissolive.pojo.Teacher" parameterType="org.xgun.kissolive.pojo.Teacher">
+        select tno, tname, tsex, tbirth, teducation, tposition, tintroduction, tpwd
+        from tb_teacher
+        where tno = #{tno} and tpwd = #{tpwd}
+    </select>
+
+    <select id="selectStudentBySnoAndSpwd" resultType="org.xgun.kissolive.pojo.Student" parameterType="org.xgun.kissolive.pojo.Student">
+        select sno, sname, ssex, sbirth, spwd, sdno, dname
+        from tb_student, tb_department
+        where sno = #{sno} and spwd = #{spwd} and sdno = dno
+    </select>
+
+    <!--学期-->
+    <insert id="insertTermMessage" parameterType="org.xgun.kissolive.pojo.Term">
+        insert tb_term(termno,termdesc) values (#{termno}, #{termdesc})
+    </insert>
+    <select id="selectTermCountByTermno" resultType="int" parameterType="string">
+        select count(1)
+        from tb_term
+        where termno = #{termno}
+    </select>
+    <select id="selectAllTerm" resultType="org.xgun.kissolive.pojo.Term">
+        select termno, termdesc from tb_term
+    </select>
+    <delete id="deleteTerm" parameterType="string">
+        delete from tb_term where termno = #{termno}
+    </delete>
+    <update id="updateTerm" parameterType="org.xgun.kissolive.pojo.Term">
+        update tb_term set termdesc = #{termdesc}
+        where termno = #{termno}
+    </update>
+    <!--学期-->
+
+    <!--院系-->
+    <insert id="insertDepartment" parameterType="org.xgun.kissolive.pojo.Department">
+        insert tb_department(dno, dname, dmanager, dtel) values (#{dno}, #{dname}, #{dmanager}, #{dtel})
+    </insert>
+    <select id="selectDepartmentCountByDno" resultType="int" parameterType="string">
+        select count(1)
+        from tb_department
+        where dno = #{dno}
+    </select>
+    <select id="selectAllDepartment" resultType="org.xgun.kissolive.pojo.Department">
+        select dno, dname, dmanager, dtel from tb_department
+    </select>
+    <delete id="deleteDepqrtment" parameterType="string">
+        delete from tb_department where dno = #{dno}
+    </delete>
+    <update id="updateDepartment" parameterType="org.xgun.kissolive.pojo.Department">
+        update tb_department
+        set dname = #{dname}, dmanager = #{dmanager}, dtel = #{dtel}
+        where dno = #{dno}
+    </update>
+    <!--院系-->
+
+    <!--老师-->
+    <insert id="inserTeacher" parameterType="org.xgun.kissolive.pojo.Teacher">
+        insert tb_teacher(tno, tname, tsex, tbirth, teducation, tposition, tintroduction )
+        values (#{tno}, #{tname}, #{tsex}, #{tbirth}, #{teducation}, #{tposition}, #{tintroduction})
+    </insert>
+    <select id="selectTeacherCountByTno" parameterType="string" resultType="int">
+        select count(1) from tb_teacher where tno = #{tno}
+    </select>
+    <select id="selectAllTeacher" resultType="org.xgun.kissolive.pojo.Teacher">
+        select tno, tname, tsex, tbirth, teducation, tposition, tintroduction
+        from tb_teacher
+    </select>
+    <delete id="deleteTeacher" parameterType="string">
+        delete from tb_teacher where tno = #{tno}
+    </delete>
+    <update id="updateTeacher" parameterType="org.xgun.kissolive.pojo.Teacher">
+        update tb_teacher
+        set tname = #{tname}, tsex = #{tsex},tbirth =  #{tbirth}, teducation = #{teducation}, tposition = #{tposition},tintroduction = #{tintroduction}
+        where tno = #{tno}
+    </update>
+    <!--老师-->
+
+    <!--学生-->
+    <insert id="insertStudent" parameterType="org.xgun.kissolive.pojo.Student">
+        insert tb_student (sno, sname, ssex, sbirth,  spwd, sdno)
+        values (#{sno}, #{sname}, #{ssex}, #{sbirth}, #{spwd}, #{sdno})
+    </insert>
+    <select id="selectStudentCountBySno" parameterType="string" resultType="int">
+        select count(1) from tb_student where sno = #{sno}
+    </select>
+    <select id="selectAllStudent" resultType="org.xgun.kissolive.pojo.Student">
+        select sno, sname, ssex, sbirth, spwd, sdno, dname
+        from tb_student, tb_department
+        where sdno = dno
+    </select>
+    <delete id="deleteStudent" parameterType="string">
+        delete from tb_student where sno = #{sno}
+    </delete>
+    <update id="updateStudent" parameterType="org.xgun.kissolive.pojo.Student">
+        update tb_student
+        set sname = #{sname}, ssex = #{ssex}, sbirth = #{sbirth}, sdno = #{sdno}
+        where sno = #{sno}
+    </update>
+    <!--学生-->
+
+    <!--消息-->
+    <insert id="insertStartLseeonNotice" parameterType="org.xgun.kissolive.pojo.Message">
+        insert tb_message (title, content, receive)
+        values
+        <foreach item="item" collection="list" separator="," open="" close="" index="index">
+            (#{item.title}, #{item.content}, #{item.receive})
+        </foreach>
+    </insert>
+
+    <select id="getTeacherMessage" parameterType="string" resultType="org.xgun.kissolive.pojo.Message">
+        select title, content
+        from tb_message
+        where receive = #{tno}
+    </select>
+
+    <!--消息-->
+
+    <insert id="insertStartClassApplication" parameterType="org.xgun.kissolive.pojo.Course">
+        insert tb_course (ctype, cterm, cdesc, ctno, cname)
+        values (#{ctype}, #{cterm}, #{cdesc}, #{ctno}, #{cname})
+    </insert>
+
+    <select id="getCourseList" resultType="org.xgun.kissolive.pojo.Course">
+        select cno, ctype, cterm, cdesc, tname, cname
+        from tb_course, tb_teacher
+        where ctno = tno and cstatus = 0
+    </select>
+
+    <insert id="insertElectiveNotice"  parameterType="org.xgun.kissolive.pojo.Message">
+        insert tb_message (title, content, receive)
+        values
+        <foreach item="item" collection="list" separator="," open="" close="" index="index">
+            (#{item.title}, #{item.content}, #{item.receive})
+        </foreach>
+    </insert>
+
+    <select id="getStudentMessage" parameterType="string" resultType="org.xgun.kissolive.pojo.Message">
+        select title, content
+        from tb_message
+        where receive = #{sno}
+    </select>
+
+    <update id="updateStatus" parameterType="org.xgun.kissolive.pojo.Course">
+        update tb_course
+        set cstatus = #{cstatus}
+        where cno = #{cno}
+    </update>
+
+    <select id="getAuditingCourse" resultType="org.xgun.kissolive.pojo.Course">
+        select cno, ctype, cterm, cdesc, tname, cname, cstatus, cresnum, ccredit
+        from tb_course, tb_teacher
+        where ctno = tno and cstatus = 1
+    </select>
+
+    <select id="getNotAuditingCourse" resultType="org.xgun.kissolive.pojo.Course">
+        select cno, ctype, cterm, cdesc, tname, cname, cstatus, cresnum, ccredit
+        from tb_course, tb_teacher
+        where ctno = tno and cstatus = 2
+    </select>
+
+    <insert id="insertSelectClass" parameterType="org.xgun.kissolive.pojo.Scort">
+        insert tb_sct (ssno, scno, stermno)
+        values (#{ssno}, #{scno}, #{stermno})
+    </insert>
+
+    <select id="selectScortCountBySnoAndCno" resultType="int" >
+        select count(1)
+        from tb_sct
+        where ssno = #{ssno} and scno = #{scno}
+    </select>
+
+    <select id="selectCourseIsSelectedBySno" parameterType="string" resultType="org.xgun.kissolive.pojo.Scort">
+        select sno, ssno, scno, stermno, cname, ccredit, tname, cresnum, cdesc
+        from tb_sct, tb_course, tb_teacher
+        where ssno = #{ssno} and cno = scno and ctno = tno
+    </select>
+
+    <update id="updateResnumReduce">
+        UPDATE tb_course
+        SET cresnum = #{cresnum} - 1
+        WHERE cno = #{cno}
+    </update>
+
+    <select id="selectNotSelectedCourseBySno" resultType="org.xgun.kissolive.pojo.Course">
+       SELECT cterm, cno, cname, ccredit, tname, cresnum, cdesc, ctno, ctype
+       FROM tb_course, tb_teacher
+       WHERE cstatus = 1 AND cno NOT IN (SELECT scno FROM tb_sct WHERE ssno = #{ssno}) AND ctno = tno
+    </select>
+
+    <delete id="deleteSelectedCourse" parameterType="int">
+        delete
+        from tb_sct
+        where sno = #{sno}
+    </delete>
+
+    <update id="updateResnumAdd">
+        UPDATE tb_course
+        SET cresnum = #{cresnum} + 1
+        WHERE cno IN (SELECT scno FROM tb_sct WHERE sno = #{sno})
+    </update>
+
+    <select id="courseList" resultType="org.xgun.kissolive.pojo.Course">
+        select cterm, cno, cname, tname, cresnum
+        from tb_course, tb_teacher
+        where ctno = tno
+    </select>
+
+    <select id="getStartCourse" resultType="org.xgun.kissolive.pojo.Course">
+        select cno, ctype, cterm, cdesc, tname, cname, cstatus, cresnum, ccredit
+        from tb_course, tb_teacher
+        where ctno = tno and cstatus = 4
+    </select>
+
+    <select id="getNotStartCourse" resultType="org.xgun.kissolive.pojo.Course">
+        select cno, ctype, cterm, cdesc, tname, cname, cstatus, cresnum, ccredit
+        from tb_course, tb_teacher
+        where ctno = tno and cstatus = 3
+    </select>
+
+    <select id="getCourseSituation" resultType="org.xgun.kissolive.pojo.Course">
+        select cno, cname, cstatus, ctno
+        from tb_course
+        where ctno= #{ctno}
+    </select>
+
+    <select id="getStartCourseByTno" resultType="org.xgun.kissolive.pojo.Course" parameterType="string">
+        select cno, ctype, cterm, cdesc, tname, cname, cstatus, cresnum, ccredit
+        from tb_course, tb_teacher
+        where ctno = tno and cstatus = 4 and tno = #{tno}
+    </select>
+
+    <select id="getStudentChooseCourseByCnoAndSno" resultType="org.xgun.kissolive.pojo.Student">
+        select b.sno, b.sname, c.dname
+        from tb_sct a, tb_student b, tb_department c
+        where scno = #{scno} and  a.ssno = b.sno AND b.sdno = c.dno
+    </select>
+
+    <update id="updateGrade" parameterType="org.xgun.kissolive.pojo.Scort">
+      <foreach item="item" collection="list" separator="," open="" close="" index="index">
+          update tb_sct
+          <set>
+              grade = #{item.grade}
+          </set>
+          <where>
+              ssno = #{item.ssno} and scno = #{item.scno}
+          </where>
+      </foreach>
+    </update>
+
+    <update id="updatePasswordByMno">
+        update tb_manager
+        set mpwd = #{mpwd}
+        where mno = #{mno}
+    </update>
+
+    <update id="updatePasswordByTno">
+        update tb_teacher
+        set tpwd = #{tpwd}
+        where tno = #{tno}
+    </update>
+
+    <update id="updatePasswordBySno">
+        update tb_student
+        set spwd = #{spwd}
+        where sno = #{sno}
+    </update>
+
+</mapper>

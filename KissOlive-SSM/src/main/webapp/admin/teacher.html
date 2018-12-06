@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>教师信息</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+
+	</head>
+
+	<body>
+		<div class="container" style="margin-top: 50px;">
+			<!-- Button trigger modal 添加模态框-->
+			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_teacher">
+  				新增
+			</button>
+
+			<div class="modal fade" id="add_teacher" tabindex="-1" role="dialog" aria-labelledby="addteacher" data-backdrop='static'>
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="addteacher">添加老师信息</h4>
+						</div>
+						<div class="modal-body">
+							<form action="#" method="post" class="form-horizontal">
+								<div class="form-group">
+									<label for="add_teacher_number" class="col-sm-2 control-label">教工号</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="add_teacher_number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="add_teacher_name" class="col-sm-2 control-label">姓名</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="add_teacher_name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">性别</label>
+									<div class="col-sm-9">
+										<!--<input type="text" class="form-control" id="add_teacher_sex">-->
+										<input type="radio" name="teacher_sex" value="男">男&nbsp;&nbsp;&nbsp;
+										<input type="radio" name="teacher_sex" value="女">女
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="add_teacher_birthday" class="col-sm-2 control-label">出生日期</label>
+									<div class="col-sm-9">
+										<input type="date" class="form-control" id="add_teacher_birthday">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="add_teacher_education" class="col-sm-2 control-label">学历</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="add_teacher_education">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="add_teacher_position" class="col-sm-2 control-label">职称</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="add_teacher_position">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="add_teacher_introduction" class="col-sm-2 control-label">个人介绍</label>
+									<div class="col-sm-9">
+										<textarea name="teacher-introduction" rows="4" cols="" id="add_teacher_introduction" class="form-control"></textarea>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-primary" onclick="add_teacher()" data-dismiss="modal">确定</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table" id="teacher_list" style="table-layout: fixed;">
+						<thead>
+							<tr>
+								<th width="10%">教工号</th>
+								<th width="10%">姓名</th>
+								<th width="9%">性别</th>
+								<th width="12%">出生日期</th>
+								<th width="9%">学历</th>
+								<th width="10%">职称</th>
+								<th width="20%">个人介绍</th>
+								<th width="20%">操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr v-for="(data, index) in datas" :key="data.tno">
+								<td>{{data.tno}}</td>
+								<td>{{data.tname}}</td>
+								<td>{{data.tsex}}</td>
+								<td>{{data.tbirth}}</td>
+								<td>{{data.teducation}}</td>
+								<td>{{data.tposition}}</td>
+								<td>{{data.tintroduction}}</td>
+								<td>
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#change_teacher" @click="edit(index)">
+  									修改
+									</button>
+									<button type="button" class="btn btn-danger" onclick="delete_teacher(this)">删除</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- 修改模态框 -->
+		<div class="modal fade" id="change_teacher" tabindex="-1" role="dialog" aria-labelledby="changeteacher" data-backdrop='static'>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="changeteacher">修改老师信息</h4>
+					</div>
+					<div class="modal-body">
+						<form action="#" method="post" class="form-horizontal">
+							<div class="form-group">
+								<label for="teacher_number" class="col-sm-2 control-label">教工号</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="teacher_number" disabled="disabled">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="teacher_name" class="col-sm-2 control-label">姓名</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="teacher_name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">性别</label>
+								<div class="col-sm-9">
+									<input name="edit_teacher_sex" type="radio" value="男">男&nbsp;&nbsp;&nbsp;
+									<input name="edit_teacher_sex" type="radio" value="女">女
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="teacher_birthday" class="col-sm-2 control-label">出生日期</label>
+								<div class="col-sm-9">
+									<input type="date" class="form-control" id="teacher_birthday">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="teacher_education" class="col-sm-2 control-label">学历</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="teacher_education">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="teacher_position" class="col-sm-2 control-label">职称</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="teacher_position">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="teacher_introduction" class="col-sm-2 control-label">个人介绍</label>
+								<div class="col-sm-9">
+									<textarea name="teacher-introduction" rows="4" cols="" id="teacher_introduction" class="form-control"></textarea>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="submit" class="btn btn-primary" onclick="edit_teacher()">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/vue.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/admin_teacher.js"></script>
+	</body>
+
+</html>

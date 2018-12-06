@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>发起开课申请</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+	</head>
+	<div class="container" style="margin-top: 50px;">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="ktype" class="col-sm-2 control-label">开课类型</label>
+				<div class="col-sm-6">
+					<input name="ktype" type="radio" value="1">通识课&nbsp;&nbsp;&nbsp; 
+					<input name="ktype" type="radio" value="2">选修课
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="kterm" class="col-sm-2 control-label">开课学期</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="kterm">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="kdesc" class="col-sm-2 control-label">开课描述</label>
+				<div class="col-sm-4">
+					<textarea name="kdesc" rows="3" id="kdesc" class="form-control"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="reset" class="btn btn-default">重置</button>
+					<button type="submit" class="btn btn-primary">发布</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="../lib/jquery.js"></script>
+	<script src="../lib/bootstrap/js/bootstrap.js"></script>
+	</body>
+
+</html>

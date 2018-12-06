@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人选课</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="css/elective_course.css">
+		<style>
+			a:hover {
+				text-decoration: none;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container" style="margin-top: 50px">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: #2E8B57">
+										选课
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+									<table class="table" id="list">
+										<tr class="info">
+											<th>学期</th>
+											<th>课程编号</th>
+											<th>课程名称</th>
+											<th>学分</th>
+											<th>教师</th>
+											<th>剩余人数</th>
+											<th>课程详情</th>
+											<th>操作</th>
+										</tr>
+										<tr v-for="(data, index) in datas">
+											<td>{{data.cterm}}</td>
+											<td>{{data.cno}}</td>
+											<td>{{data.cname}}</td>
+											<td>{{data.ccredit}}</td>
+											<td>{{data.tname}}</td>
+											<td>{{data.cresnum}}</td>
+											<td>
+												<!-- Button trigger modal -->
+												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" @click="look(index)">
+													查看
+												</button>
+											</td>
+											<td>
+												<button class="btn btn-success" onclick="select(this)">选课</button>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: #CC3300">
+										查看已选课程
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="panel-body">
+									<table class="table" id="selected">
+										<tr class="info">
+											<th>学期</th>
+											<th>课程编号</th>
+											<th>课程名称</th>
+											<th>学分</th>
+											<th>教师</th>
+											<th>剩余人数</th>
+											<th>课程详情</th>
+											<th>操作</th>
+										</tr>
+										<tr v-for="(data, index) in datas">
+											<td style="display: none">{{data.sno}}</td>
+											<td>{{data.stermno}}</td>
+											<td>{{data.scno}}</td>
+											<td>{{data.cname}}</td>
+											<td>{{data.ccredit}}</td>
+											<td>{{data.tname}}</td>
+											<td>{{data.cresnum}}</td>
+											<td>
+												<!-- Button trigger modal -->
+												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#selected_course" @click="see(index)">
+													查看
+												</button>
+											</td>
+											<td>
+												<button class="btn btn-danger" onclick="withdrawalCourse(this)">退选</button>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">课程详情</h4>
+					</div>
+					<div class="modal-body">
+						<p id="course_desc"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="selected_course" tabindex="-1" role="dialog" aria-labelledby="title" data-backdrop='static'>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="title">课程详情</h4>
+					</div>
+					<div class="modal-body">
+						<p id="selected_course_desc"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/vue.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script src="../lib/jquery.cookie.js"></script>
+		<script src="js/elective_course.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>学生信息</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+	</head>
+
+	<body>
+		<div class="container" style="margin-top: 50px;">
+			<!-- Button trigger modal 添加模态框-->
+			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_student">
+				新增
+			</button>
+			<div class="modal fade" id="add_student" tabindex="-1" role="dialog" aria-labelledby="addstudent" data-backdrop='static'>
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="addstudent">添加学生信息</h4>
+						</div>
+						<div class="modal-body">
+							<form action="#" method="post" class="form-horizontal">
+								<div class="form-group">
+									<label for="add_student_number" class="col-sm-2 control-label">学号</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="add_student_number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="add_student_name" class="col-sm-2 control-label">姓名</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="add_student_name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">性别</label>
+									<div class="col-sm-9">
+										<input name="student_sex" type="radio" value="男">男&nbsp;&nbsp;&nbsp;
+										<input name="student_sex" type="radio" value="女">女
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="add_student_birthday" class="col-sm-2 control-label">出生日期</label>
+									<div class="col-sm-9">
+										<input type="date" class="form-control" id="add_student_birthday">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="add_student_department" class="col-sm-2 control-label">系别</label>
+									<div class="col-sm-9" id="option_list">
+										<select id="add_student_department" class="form-control" v-model="selected">
+											<option value="" hidden>==请选择院系==</option>
+											<option v-for="option in options" :value="option.dno">{{option.dname}}</option>
+										</select>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button type="submit" class="btn btn-primary" onclick="add_student()">确定</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table" id="student_list">
+						<thead>
+							<tr>
+								<th>学号</th>
+								<th>姓名</th>
+								<th>性别</th>
+								<th>出生日期</th>
+								<th>系别</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr v-for="(data, index) in datas" :key="data.sno">
+								<td>{{data.sno}}</td>
+								<td>{{data.sname}}</td>
+								<td>{{data.ssex }}</td>
+								<td>{{data.sbirth}}</td>
+								<td>{{data.dname}}</td>
+								<td>
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#change_student" @click="edit(index)">
+  									修改
+									</button>
+									<!--<button type="button" class="btn btn-danger" onclick="delete_student(this)">删除</button>-->
+									<button type="button" class="btn btn-danger" onclick="delete_student(this)">删除</button>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- 修改模态框 -->
+		<div class="modal fade" id="change_student" tabindex="-1" role="dialog" aria-labelledby="changestudent" data-backdrop='static'>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="changestudent">修改学生信息</h4>
+					</div>
+					<div class="modal-body">
+						<form action="#" method="post" class="form-horizontal">
+							<div class="form-group">
+								<label for="student_number" class="col-sm-2 control-label">学号</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="student_number" disabled="disabled">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="student_name" class="col-sm-2 control-label">姓名</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="student_name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label  class="col-sm-2 control-label">性别</label>
+								<div class="col-sm-9">
+									<input name="edit_student_sex" type="radio" value="男">男&nbsp;&nbsp;&nbsp;
+									<input name="edit_student_sex" type="radio" value="女">女
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="student_birthday" class="col-sm-2 control-label">出生日期</label>
+								<div class="col-sm-9">
+									<input type="date" class="form-control" id="student_birthday">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="edit_option_list" class="col-sm-2 control-label">系别</label>
+								<div class="col-sm-9" id="edit_option_list">
+									<select id="edit_student_department" class="form-control" v-model="selected">
+										<option v-for="option in options" :value="option.dno">{{option.dname}}</option>
+									</select>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="submit" class="btn btn-primary" onclick="edit_student()">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/vue.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/admin_student.js"></script>
+	</body>
+
+</html>

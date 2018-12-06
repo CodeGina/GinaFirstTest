@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>课程表</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+	</head>
+
+	<body>
+		<table class="table" id="list">
+			<tr class="info">
+				<th>课程号</th>
+				<th>课程名</th>
+				<th>学分</th>
+				<th>学生名单</th>
+				<th>剩余名额</th>
+			</tr>
+			<tr v-cloak v-for="(data, index) in datas">
+				<td>{{data.cno}}</td>
+				<td>{{data.cname}}</td>
+				<td>{{data.ccredit}}</td>
+				<td>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#lookup" onclick="look(this)">
+  					查看
+					</button>
+				</td>
+				<td>{{data.cresnum}}</td>
+			</tr>
+		</table>
+		<!-- Modal -->
+		<div class="modal fade" id="lookup" tabindex="-1" role="dialog" aria-labelledby="title" data-backdrop='static'>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="title">学生名单</h4>
+					</div>
+					<div class="modal-body" style="height:400px; overflow:scroll;">
+						<table class="table" id="student_list">
+							<tr class="info">
+								<th>学号</th>
+								<th>姓名</th>
+								<th>系别</th>
+							</tr>
+							<tr v-cloak v-for="(data, index) in datas">
+								<td>{{data.sno}}</td>
+								<td>{{data.sname}}</td>
+								<td>{{data.dname}}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/vue.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script src="../lib/jquery.cookie.js"></script>
+		<script src="js/teacher_course.js"></script>
+
+	</body>
+
+</html>

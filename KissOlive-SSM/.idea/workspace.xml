@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5c9fadc5-c690-4742-977d-269812b96e60" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-7123329">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="39" />
+          <entry key="project.open.time.21" value="5" />
+          <entry key="project.open.time.23" value="5" />
+          <entry key="project.open.time.24" value="3" />
+          <entry key="project.open.time.25" value="2" />
+          <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.28" value="4" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.30" value="2" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.33" value="3" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.38" value="2" />
+          <entry key="project.open.time.39" value="2" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="40" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="LICENSE" value="2" />
+          <entry key="class" value="2" />
+          <entry key="cmd" value="1" />
+          <entry key="css" value="7" />
+          <entry key="gitattributes" value="1" />
+          <entry key="gitignore" value="2" />
+          <entry key="html" value="207" />
+          <entry key="iml" value="4" />
+          <entry key="java" value="251" />
+          <entry key="js" value="188" />
+          <entry key="md" value="2" />
+          <entry key="mvnw" value="1" />
+          <entry key="page" value="1" />
+          <entry key="properties" value="5" />
+          <entry key="xml" value="52" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="2" />
+          <entry key="CSS" value="7" />
+          <entry key="HTML" value="208" />
+          <entry key="IDEA_MODULE" value="4" />
+          <entry key="JAVA" value="251" />
+          <entry key="JavaScript" value="188" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="Properties" value="5" />
+          <entry key="XML" value="52" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="40" />
+          <entry key="dummy" value="6" />
+          <entry key="html" value="6125" />
+          <entry key="java" value="16920" />
+          <entry key="js" value="14151" />
+          <entry key="properties" value="49" />
+          <entry key="xml" value="4959" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="40" />
+          <entry key="HTML" value="6125" />
+          <entry key="JAVA" value="16920" />
+          <entry key="JavaScript" value="14151" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Properties" value="49" />
+          <entry key="SQL" value="129" />
+          <entry key="XML" value="4830" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="zqu_004" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
+        <option value="HTML File" />
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>data</find>
+      <find>on=&quot;list</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/KissOlive-SSM" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/admin_department.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/admin_term.js" />
+        <option value="$PROJECT_DIR$/src/main/java/org/xgun/kissolive/pojo/Kaike.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/start_lesson.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/course_selection.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/admin_start_lesson.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/course_selection.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/login.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/js/student_information.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/student_information.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/js/student_message.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/student_message.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/admin_auditing.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/student_score.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/css/auditing.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/css/elective_course.css" />
+        <option value="$PROJECT_DIR$/src/main/java/org/xgun/kissolive/pojo/Scort.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/elective_course.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/auditing.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/release_result.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/release_result.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/teacher/class_situation.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/teacher/js/class_situation.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/js/elective_course.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/teacher/js/teacher_course.js" />
+        <option value="$PROJECT_DIR$/src/main/java/org/xgun/kissolive/pojo/Course.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/teacher/teacher_course.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/teacher.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/admin_teacher.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/student.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/admin_student.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/chang_password.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/teacher/change_password.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/teacher/js/teacher_password.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/admin_password.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/change_password.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/js/student_password.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/admin_login.js" />
+        <option value="$PROJECT_DIR$/src/main/java/org/xgun/kissolive/controller/GinaController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/js/admin_main.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/admin_main.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/teacher/js/teacher_main.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/teacher/teacher_main.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/student_main.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student/js/student_main.js" />
+        <option value="$PROJECT_DIR$/src/main/java/org/xgun/kissolive/dao/GinaMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/GinaMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/xgun/kissolive/service/impl/GinaServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/xgun/kissolive/service/IGinaService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/teacher/teacher_score.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/teacher/js/teacher_score.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="zqu_004" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-28" />
+    <option name="y" value="15" />
+    <option name="width" value="833" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpringJavaInjectionPointsAutowiringInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="zqu_004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KissOlive-SSM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zqu_004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KissOlive-SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zqu_004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KissOlive-SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zqu_004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KissOlive-SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zqu_004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KissOlive-SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kissolive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zqu_004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KissOlive-SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kissolive" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zqu_004" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KissOlive-SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kissolive" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544108619786" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProject\KissOlive-SSM\src\main\webapp\lib" />
+      <recent name="D:\IdeaProject\KissOlive-SSM\src\main\webapp\teacher" />
+      <recent name="D:\IdeaProject\KissOlive-SSM\src\main\webapp\student" />
+      <recent name="D:\IdeaProject\KissOlive-SSM\src\main\webapp" />
+      <recent name="D:\IdeaProject\KissOlive-SSM\src\main\webapp\css\admin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Zqu004Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zqu_004" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.xgun.kissolive.Zqu004Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c9fadc5-c690-4742-977d-269812b96e60" name="Default Changelist" comment="" />
+      <created>1542033913123</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542033913123</updated>
+      <workItem from="1542033917368" duration="6668000" />
+      <workItem from="1542072432426" duration="3891000" />
+      <workItem from="1542105420206" duration="2845000" />
+      <workItem from="1542109878898" duration="3345000" />
+      <workItem from="1542113286524" duration="4969000" />
+      <workItem from="1542118328995" duration="7026000" />
+      <workItem from="1542161134675" duration="25641000" />
+      <workItem from="1542242784271" duration="1055000" />
+      <workItem from="1542265029212" duration="23095000" />
+      <workItem from="1542335206399" duration="12676000" />
+      <workItem from="1542556181350" duration="1808000" />
+      <workItem from="1542609524011" duration="8034000" />
+      <workItem from="1542620710585" duration="1360000" />
+      <workItem from="1542626319347" duration="5627000" />
+      <workItem from="1542683315229" duration="10231000" />
+      <workItem from="1542771285239" duration="28662000" />
+      <workItem from="1542845426926" duration="4779000" />
+      <workItem from="1542869068401" duration="2624000" />
+      <workItem from="1542940665934" duration="9026000" />
+      <workItem from="1542976683210" duration="5377000" />
+      <workItem from="1543036806821" duration="13003000" />
+      <workItem from="1543116976157" duration="28123000" />
+      <workItem from="1543155034226" duration="6940000" />
+      <workItem from="1543162218418" duration="1602000" />
+      <workItem from="1543214202882" duration="7798000" />
+      <workItem from="1543231923634" duration="4918000" />
+      <workItem from="1543277249051" duration="3877000" />
+      <workItem from="1543281213693" duration="21733000" />
+      <workItem from="1543310378524" duration="11639000" />
+      <workItem from="1543331625736" duration="4224000" />
+      <workItem from="1543375382449" duration="32325000" />
+      <workItem from="1543450890910" duration="9102000" />
+      <workItem from="1543563310859" duration="7692000" />
+      <workItem from="1543758818685" duration="8253000" />
+      <workItem from="1543818923852" duration="8152000" />
+      <workItem from="1543836417740" duration="1416000" />
+      <workItem from="1543847363677" duration="4957000" />
+      <workItem from="1543882569279" duration="2605000" />
+      <workItem from="1543989606657" duration="1980000" />
+      <workItem from="1544107177179" duration="1438000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="350516000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49898168" visible="true" weight="0.36838123" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.50101835" side_tool="true" weight="0.27155825" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48789713" weight="0.08374384" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39901477" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5121029" side_tool="true" weight="0.8259442" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924356" weight="0.32676518" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32928804" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/css/elective_course.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/css/elective_course.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/css/auditing.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="24" lean-forward="true" selection-end-line="60" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/js/student_information.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/auditing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/release_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-810">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/class_situation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="27" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/teacher_application.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/js/teacher_application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/js/student_message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/elective_course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="121" column="48" lean-forward="true" selection-start-line="121" selection-start-column="48" selection-end-line="121" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/js/elective_course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/js/teacher_message.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="27" column="3" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="27" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/xgun/kissolive/pojo/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/teacher_course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="47" column="46" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/js/teacher_course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="34" column="62" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/student.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="127" column="65" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/admin_student.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="143" column="55" selection-start-line="143" selection-start-column="55" selection-end-line="143" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/teacher_message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="52" column="53" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="52" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/course_selection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/release_result.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="113" column="66" lean-forward="true" selection-start-line="113" selection-start-column="66" selection-end-line="113" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/admin_auditing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/js/class_situation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="34" column="90" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/teacher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="108" column="88" selection-start-line="108" selection-start-column="81" selection-end-line="108" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/chang_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="48" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/admin_password.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1225">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/change_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/js/teacher_password.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="83" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/js/student_password.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="63" column="61" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/change_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/xgun/kissolive/pojo/Scort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/admin_teacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="52" column="46" lean-forward="true" selection-start-line="51" selection-start-column="4" selection-end-line="52" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/teacher_main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="88" column="50" lean-forward="true" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/js/teacher_main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin_main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="27" column="131" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/admin_main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/js/admin_login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="20" column="85" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="23" column="78" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="23" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/js/student_main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student/student_main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/xgun/kissolive/controller/GinaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="652" column="9" selection-start-line="652" selection-start-column="9" selection-end-line="652" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/xgun/kissolive/service/impl/GinaServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="365" selection-start-line="365" selection-start-column="2" selection-end-line="376" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/xgun/kissolive/service/IGinaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="106" column="45" selection-start-line="106" selection-start-column="6" selection-end-line="106" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/GinaMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="251" column="77" selection-start-line="251" selection-start-column="77" selection-end-line="251" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/xgun/kissolive/pojo/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/teacher_score.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="82" column="107" selection-start-line="82" selection-start-column="107" selection-end-line="82" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/teacher/js/teacher_score.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="51" column="19" lean-forward="true" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <folding>
+            <element signature="e#19#664#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/xgun/kissolive/dao/GinaMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/xgun/kissolive/pojo/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2375">
+          <caret line="135" column="18" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

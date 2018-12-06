@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>发布结果</title>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="css/auditing.css">
+		<style>
+			body {
+				position: relative；
+			}
+			
+			body::-webkit-scrollbar {
+				display: none;
+			}
+			
+			p {
+				height: 50px;
+				line-height: 50px;
+				font-size: 20px;
+				margin-bottom: 0;
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+		<div style="height: 220px; overflow: auto;">
+			<table class="table" id="list">
+				<tr class="info">
+					<td>学期</td>
+					<td>课程编号</td>
+					<td>课程名称</td>
+					<td>教师</td>
+					<td>剩余人数</td>
+					<td>是否开课</td>
+				</tr>
+				<tr v-for="(data, index) in datas">
+					<td>{{data.cterm}}</td>
+					<td>{{data.cno}}</td>
+					<td>{{data.cname}}</td>
+					<td>{{data.tname}}</td>
+					<td>{{data.cresnum}}</td>
+					<td>
+						<!--<a style="color: #3CB371;" href="#"><i class="fa fa-check-square fa-2x" aria-hidden="true" onclick="agree(this)"></i></a>-->
+						<!--<a style="color: #DC143C;" href="#"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></a>-->
+						<button style="color: #3CB371; border: none; background-color: transparent" type="button" class="fa fa-check-square fa-2x" aria-hidden="true" onclick="agree(this)"></button>
+						<button style="color: #DC143C; border: none; background-color: transparent" type="button" class="fa fa-window-close fa-2x" aria-hidden="true" onclick="disagree(this)"></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div style="width: 100%; margin-top: 50px;">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingOne">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: #2E8B57">
+								开课
+							</a>
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+						<div class="panel-body">
+							<table class="table" id="agree_frame">
+								<tr class="info">
+									<th>学期</th>
+									<th>课程类型</th>
+									<th>课程名称</th>
+									<th>任课老师</th>
+								</tr>
+								<tr v-for="(data, index) in datas">
+									<td>{{data.cterm}}</td>
+									<td>{{data.ctype}}</td>
+									<td>{{data.cname}}</td>
+									<td>{{data.tname}}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingTwo">
+						<h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: #CC3300">
+								不开课
+							</a>
+						</h4>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						<div class="panel-body">
+							<table class="table" id="disagree_frame">
+								<tr class="info">
+									<th>学期</th>
+									<th>课程类型</th>
+									<th>课程名称</th>
+									<th>任课老师</th>
+								</tr>
+								<tr v-for="(data, index) in datas">
+									<td>{{data.cterm}}</td>
+									<td>{{data.ctype}}</td>
+									<td>{{data.cname}}</td>
+									<td>{{data.tname}}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/vue.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script src="js/release_result.js"></script>
+
+	</body>
+
+</html>
