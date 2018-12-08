@@ -118,7 +118,7 @@ public interface GinaMapper {
     List<Student> getStudentChooseCourseByCnoAndSno( @Param("scno") int cno);
 
     //录入成绩
-    int updateGrade(@Param("list")List<Scort> scorts);
+    int updateGrade(@Param("item") StuGrade stuGrade);
 
     //修改管理员密码
     int updatePasswordByMno(@Param("mno") String mno, @Param("mpwd") String mpwd);
@@ -127,4 +127,6 @@ public interface GinaMapper {
     //修改学生密码
     int updatePasswordBySno(@Param("sno") String sno, @Param("spwd") String spwd);
 
+    //查询成绩
+    List<StuGradeDto> selectGrade(String sno);
 }

@@ -15,7 +15,7 @@ function login() {
 		dataType: 'json',
 		success: function(result) {
 			if(result.status == 0) { //成功
-			    alert(result.data.mno+"..."+result.data.mname+"..."+result.data.mpwd);
+			    //alert(result.data.mno+"..."+result.data.mname+"..."+result.data.mpwd);
                 $.cookie("mno",result.data.mno,{ expires: 7, path: '/' });
                 $.cookie("mname",result.data.mname,{ expires: 7, path: '/' });
 				window.location.href = "http://127.0.0.1:8080/admin/admin_main.html";

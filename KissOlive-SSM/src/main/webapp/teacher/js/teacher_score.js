@@ -46,7 +46,14 @@ function entryGrade(obj) {
                     },
                     created: function () {
                         this.datas = result.data;
+                        $('#totalcount').val(this.datas.length);
+                        $('#kechenghao').val(cno);
                         //console.log(this.datas[1].sno);
+                    },
+                    methods: {
+                        infoId: function (index) {
+                            return "info" + index
+                        }
                     }
                 });
             }else {
@@ -63,3 +70,37 @@ function entryGrade(obj) {
 $('#score').on('hidden.bs.modal', function () {
     window.location.reload();
 })
+
+function submiton(obj) {
+    var totalcount = $('#totalcount').val();
+    var cno = parseInt($('#kechenghao').val());
+    var items = [];
+    for (var i = 0; i < totalcount; i++) {
+        var param = {
+            "sno":$(("#info"+i)).find(".sno").html(),
+            "sname":$(("#info"+i)).find(".sname").html(),
+            "grade":parseInt($(("#info"+i)).find(".form-control").val()),
+            "cno":cno
+        }
+        items.push(param);
+    }
+    console.log(JSON.stringify(items));
+    $.ajax({
+        type: "post",
+        url: "http://localhost:8080/entryGrade.do",
+        data: JSON.stringify(items),
+        dataType: "json",
+        contentType: 'application/json',
+        success: function (result) {
+            if(result.status == 0){
+                alert(result.message);
+            }else {
+                alert("回显失败！");
+            }
+        },
+        error: function () {
+            alert("异常");
+        }
+    })
+
+}

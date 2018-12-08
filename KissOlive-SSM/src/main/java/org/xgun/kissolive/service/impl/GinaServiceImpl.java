@@ -20,6 +20,7 @@ public class GinaServiceImpl implements IGinaService {
 
 // 学期
     @Override
+    @Transactional
     public ServerResponse<Boolean> addManager(Manager manager) {
         Boolean result = ginaMapper.insertManager(manager) > 0 ? true : false;
         // 如果在这个方法中发生了回滚，判断是否回滚，并向上一级输出提示信息
@@ -342,39 +343,25 @@ public class GinaServiceImpl implements IGinaService {
         return ServerResponse.createBySuccess(students);
     }
 
-//    @Override
-//    public ServerResponse entryGrade(String ssno, int scno, int grade){
-//        Boolean result = ginaMapper.updateGrade(ssno,scno,grade) > 0 ? true : false;
-//        return ServerResponse.createBySuccess(result);
-//    }
-//@Override
-//@Transactional
-//public ServerResponse sentStartLseeonNotice(Message message){
-//    List<Teacher> teacherList = ginaMapper.selectAllTeacher();
-//    List<Message> messageList = new ArrayList<>();
-//    for (int i = 0; i < teacherList.size(); i++) {
-//        Message msg = new Message(0,message.getTitle(),message.getContent(),teacherList.get(i).getTno());
-//        messageList.add(msg);
-//    }
-//    int i = ginaMapper.insertStartLseeonNotice(messageList);
-//    if(i > 0)
-//        return ServerResponse.createBySuccess();
-//    else
-//        return ServerResponse.createByErrorMessage("发送开课通知失败");
-//}
+    @Override
+    @Transactional
+    public ServerResponse entryGrade(List<StuGrade> list){
+        boolean flag = true;
+        for (StuGrade stuGrade : list) {
+            if(ginaMapper.updateGrade(stuGrade) == 0)
+                flag = false;
+        }
+        if(flag)
+            return ServerResponse.createBySuccessMessage("录入成功");
+        else
+            return ServerResponse.createByErrorMessage("录入失败");
+    }
 
-//    @Override
-//    @Transactional
-//    public ServerResponse entryGrade(Scort scort){
-//        //获取选择某一课程的全部学生
-//        List<Student> studentList = ginaMapper.getStudentChooseCourseByCnoAndSno(scort.getScno());
-//        List<Scort> scortList = new ArrayList<>();
-//        for (int i = 0; i < studentList.size(); i++) {
-//            Scort scort1 = new Scort(studentList.get(i).getSno(),scort.getScno(),scort.getGrade(),scort.getStermno(),scort.getCname(),scort.getCcredit(),scort.getTname(),scort.getCresnum(),scort.getCdesc());
-//            //Boolean result = ginaMapper.updateGrade(scort1) > 0 ? true : false;
-//            scortList.add(scort1);
-//        }
-//    }
+    @Override
+    public ServerResponse getMyGrade(String sno){
+        List<StuGradeDto> list = ginaMapper.selectGrade(sno);
+        return ServerResponse.createBySuccess(list);
+    }
 
     @Override
     public ServerResponse changePasswordByAdmin(String mno, String mpwd){

@@ -248,16 +248,10 @@
         where scno = #{scno} and  a.ssno = b.sno AND b.sdno = c.dno
     </select>
 
-    <update id="updateGrade" parameterType="org.xgun.kissolive.pojo.Scort">
-      <foreach item="item" collection="list" separator="," open="" close="" index="index">
-          update tb_sct
-          <set>
-              grade = #{item.grade}
-          </set>
-          <where>
-              ssno = #{item.ssno} and scno = #{item.scno}
-          </where>
-      </foreach>
+    <update id="updateGrade" parameterType="org.xgun.kissolive.pojo.StuGrade">
+      update tb_sct
+      set grade = #{item.grade}
+      where ssno = #{item.sno} and scno = #{item.cno}
     </update>
 
     <update id="updatePasswordByMno">
@@ -277,5 +271,11 @@
         set spwd = #{spwd}
         where sno = #{sno}
     </update>
+
+    <select id="selectGrade" parameterType="string" resultType="org.xgun.kissolive.pojo.StuGradeDto">
+        SELECT a.ssno as sno,a.scno as cno,a.grade as grade,a.stermno as termno,b.cname as cname
+        FROM tb_sct a , tb_course b
+        WHERE a.scno = b.`cno` AND a.ssno = #{sno}
+    </select>
 
 </mapper>

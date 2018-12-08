@@ -9,6 +9,8 @@ import org.xgun.kissolive.service.IGinaService;
 import org.xgun.kissolive.utils.MD5Util;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class GinaController {
@@ -650,22 +652,31 @@ public class GinaController {
         return iGinaService.getStudentChooseCourse(cno);
     }
 
-//    /**
-//     * 录入成绩
-//     * @param session
-//     * @param ssno
-//     * @param scno
-//     * @param grade
-//     * @return
-//     */
-//    @RequestMapping(value = "entryGrade.do",method = RequestMethod.POST)
-//    @ResponseBody
-//    public ServerResponse entryGrade(HttpSession session,
-//                                     @RequestParam("student_number") String ssno,
-//                                     @RequestParam("course_number") int scno,
-//                                     @RequestParam("grade") int grade){
-//        return iGinaService.entryGrade(ssno,scno,grade);
-//    }
+    /**
+     * 录入成绩
+     * @param stuGrades
+     * @return
+     */
+    @RequestMapping(value = "entryGrade.do",method = RequestMethod.POST)
+    @ResponseBody
+    public ServerResponse entryGrade(@RequestBody StuGrade[] stuGrades){
+        List<StuGrade> stuGradeList = new ArrayList<StuGrade>();
+        for (StuGrade stuGrade : stuGrades) {
+            stuGradeList.add(stuGrade);
+        }
+        return iGinaService.entryGrade(stuGradeList);
+    }
+
+    /**
+     * 获取个人成绩
+     * @param sno
+     * @return
+     */
+    @RequestMapping(value = "getMyGrade.do",method = RequestMethod.POST)
+    @ResponseBody
+    public ServerResponse getMyGrade(@RequestParam("sno") String sno){
+        return iGinaService.getMyGrade(sno);
+    }
 
     /**
      * 修改管理员密码

@@ -3,6 +3,8 @@ package org.xgun.kissolive.service;
 import org.xgun.kissolive.common.ServerResponse;
 import org.xgun.kissolive.pojo.*;
 
+import java.util.List;
+
 public interface IGinaService {
     //添加管理员
     ServerResponse<Boolean> addManager(Manager manager);
@@ -103,8 +105,8 @@ public interface IGinaService {
     ServerResponse getStudentChooseCourse(int cno);
 
     //录入成绩
-    //ServerResponse entryGrade(String ssno, int scno, int grade);
-    //ServerResponse entryGrade(Scort scort);
+    ServerResponse entryGrade(List<StuGrade> list);
+    ServerResponse getMyGrade(String sno);
 
     //修改管理员密码
     ServerResponse changePasswordByAdmin(String mno, String mpwd);
