@@ -84,7 +84,6 @@ function submiton(obj) {
         }
         items.push(param);
     }
-    console.log(JSON.stringify(items));
     $.ajax({
         type: "post",
         url: "http://localhost:8080/entryGrade.do",
@@ -93,7 +92,7 @@ function submiton(obj) {
         contentType: 'application/json',
         success: function (result) {
             if(result.status == 0){
-                alert(result.message);
+                alert("评分成功！");
             }else {
                 alert("回显失败！");
             }
@@ -102,5 +101,4 @@ function submiton(obj) {
             alert("异常");
         }
     })
-
 }

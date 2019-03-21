@@ -48,7 +48,7 @@
 					<td>{{data.cterm}}</td>
 					<td>
 						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#score" onclick="entryGrade(this)">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#score" onclick="entryGrade(this)" id="pingfen">
  							评分
 						</button>
 					</td>
@@ -64,7 +64,7 @@
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title" id="title">成绩录入</h4>
 					</div>
-					<div class="modal-body">
+					<div class="modal-body" style="height:300px; overflow:scroll;">
 
 						<table class="table" id="student_list">
 							<tr>

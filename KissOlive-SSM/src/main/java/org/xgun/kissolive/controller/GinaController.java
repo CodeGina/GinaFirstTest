@@ -7,6 +7,7 @@ import org.xgun.kissolive.common.ServerResponse;
 import org.xgun.kissolive.pojo.*;
 import org.xgun.kissolive.service.IGinaService;
 import org.xgun.kissolive.utils.MD5Util;
+import org.xgun.kissolive.utils.SetDataUtil;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -16,6 +17,20 @@ import java.util.List;
 public class GinaController {
     @Autowired
     private IGinaService iGinaService;
+
+    @RequestMapping(value = "tianjiaxueshengshuju.do", method = RequestMethod.POST)
+    @ResponseBody
+    public ServerResponse tianjiaxueshengshuju() {
+        SetDataUtil setDataUtil = new SetDataUtil();
+        List<Teacher> list = setDataUtil.newTeacher();
+        String MD5password = MD5Util.MD5EncodeUtf8("123456");
+        for (Teacher teacher:list) {
+            teacher.setTpwd(MD5password);
+            iGinaService.addTeacher(teacher);
+        }
+        return ServerResponse.createBySuccess();
+    }
+
 
     /**
      * 添加管理员
@@ -434,7 +449,7 @@ public class GinaController {
     }
 
     /**
-     * 发布选课通知
+     * 发布开课通知
      * @param session
      * @param title
      * @param content
@@ -582,7 +597,7 @@ public class GinaController {
     public ServerResponse reduceResnum(HttpSession session,
                                        @RequestParam("course_number") int cno,
                                        @RequestParam("cresnum") int cresnum){
-        System.out.println(cno+"========"+cresnum);
+        //System.out.println(cno+"========"+cresnum);
         return iGinaService.updateResnumReduce(cno,cresnum);
     }
 

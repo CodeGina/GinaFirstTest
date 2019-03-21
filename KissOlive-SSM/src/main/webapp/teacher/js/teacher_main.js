@@ -16,8 +16,8 @@ function log_off(){
 //导航区域项目点击增加标签页处理
 $(function() {
 	var calcHeight = function() {
-		$('#mainFrameTabs').height(1500);
-
+        var h =$(window).height() - 100;
+        $('#mainFrameTabs').height(h);
 	};
 
 	$('a', $('#information')).on('click', function(e) {
@@ -104,7 +104,7 @@ $(function() {
         function(){
             //询问是否关闭全部
             if (confirm("是否要关闭所有选项卡 ?")){
-                window.location.href='admin_main.html';
+                window.location.href='teacher_main.html';
             }
         });
 

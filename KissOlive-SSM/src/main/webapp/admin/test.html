@@ -8,65 +8,13 @@
 	</head>
 	
 	<body>
-		惚红火火恍恍惚惚
-		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_student">
-			新增
-		</button>
-		<div class="modal fade" id="add_student" tabindex="-1" role="dialog" aria-labelledby="addstudent" data-backdrop='static'>
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="addstudent">添加学生信息</h4>
-					</div>
-					<div class="modal-body">
-						<form action="#" method="post" class="form-horizontal">
-							<div class="form-group">
-								<label for="add_student_number" class="col-sm-2 control-label">学号</label>
-								<div class="col-sm-9">
-									<input type="text" class="form-control" id="add_student_number">
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="add_student_name" class="col-sm-2 control-label">姓名</label>
-								<div class="col-sm-9">
-									<input type="text" class="form-control" id="add_student_name">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-2 control-label">性别</label>
-								<div class="col-sm-9">
-									<input name="student_sex" type="radio" value="male">男&nbsp;&nbsp;&nbsp;
-									<input name="student_sex" type="radio" value="female">女
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="add_student_birthday" class="col-sm-2 control-label">出生日期</label>
-								<div class="col-sm-9">
-									<input type="date" class="form-control" id="add_student_birthday">
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="add_student_department" class="col-sm-2 control-label">系别</label>
-								<div class="col-sm-9" id="option_list">
-									<select id="add_student_department" class="form-control" v-model="selected">
-										<option v-for="option in options" :value="option.dno">{{option.dname}}</option>
-									</select>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-						<button type="submit" class="btn btn-primary" onclick="add_student()">确定</button>
-					</div>
-				</div>
-			</div>
-		</div>
+		欢迎 <span id="name" style="color: #0a87c1;"></span> 登录
+
 		<script src="../lib/jquery.js"></script>
 		<script src="../lib/vue.js"></script>
+		<script src="../lib/jquery.cookie.js"></script>
 		<script src="../lib/bootstrap/js/bootstrap.js"></script>
-		<script type="text/javascript" src="js/test.js"></script>
+		<script src="js/test.js"></script>
 	</body>
 
 </html>

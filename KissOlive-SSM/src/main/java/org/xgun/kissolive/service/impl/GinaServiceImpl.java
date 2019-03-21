@@ -309,7 +309,7 @@ public class GinaServiceImpl implements IGinaService {
 
     @Override
     public ServerResponse courseSelection(){
-        List<Course> courseList = ginaMapper.courseList();
+        List<Course> courseList = ginaMapper.getAuditingCourse();
         return ServerResponse.createBySuccess(courseList);
     }
 

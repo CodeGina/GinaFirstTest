@@ -22,7 +22,7 @@ function add_department() {
                 alert("添加院系信息成功！");
                 window.location.reload();
             }else {
-                alert(result.msg());
+                alert(result.msg);
             }
         },
         error: function () {

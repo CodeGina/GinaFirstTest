@@ -12,8 +12,8 @@ function log_off(){
 //仅演示功能
 $(function() {
 	var calcHeight = function() {
-		var h = $(window).height() + 150;
-		$('#mainFrameTabs').height(h);
+		var h = $(window).height();
+		$('#mainFrameTabs').height();
 	};
 
 	$('a', $('#term')).on('click', function(e) {

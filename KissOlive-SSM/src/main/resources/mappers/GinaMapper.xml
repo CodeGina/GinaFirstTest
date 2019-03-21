@@ -68,8 +68,8 @@
 
     <!--老师-->
     <insert id="inserTeacher" parameterType="org.xgun.kissolive.pojo.Teacher">
-        insert tb_teacher(tno, tname, tsex, tbirth, teducation, tposition, tintroduction )
-        values (#{tno}, #{tname}, #{tsex}, #{tbirth}, #{teducation}, #{tposition}, #{tintroduction})
+        insert tb_teacher(tno, tname, tsex, tbirth, teducation, tposition, tintroduction, tpwd )
+        values (#{tno}, #{tname}, #{tsex}, #{tbirth}, #{teducation}, #{tposition}, #{tintroduction}, #{tpwd})
     </insert>
     <select id="selectTeacherCountByTno" parameterType="string" resultType="int">
         select count(1) from tb_teacher where tno = #{tno}
@@ -217,6 +217,8 @@
         from tb_course, tb_teacher
         where ctno = tno
     </select>
+
+
 
     <select id="getStartCourse" resultType="org.xgun.kissolive.pojo.Course">
         select cno, ctype, cterm, cdesc, tname, cname, cstatus, cresnum, ccredit

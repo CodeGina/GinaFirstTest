@@ -15,8 +15,8 @@ function log_off(){
 //导航区域项目点击增加标签页处理
 $(function() {
 	var calcHeight = function() {
-		$('#mainFrameTabs').height(1500);
-
+		var h =$(window).height() - 100;
+		$('#mainFrameTabs').height(h);
 	};
 
 	$('a', $('#information')).on('click', function(e) {
@@ -45,6 +45,15 @@ $(function() {
 		var title = $(this).text();
 		$('#mainFrameTabs').bTabsAdd(menuId, title, url);
 	});
+
+    // $('a', $('#opening_course')).on('click', function(e) {
+    //     e.stopPropagation();
+    //     var li = $("#opening_course");
+    //     var menuId = $(li).attr('mid');
+    //     var url = $(li).attr('funurl');
+    //     var title = $(this).text();
+    //     $('#mainFrameTabs').bTabsAdd(menuId, title, url);
+    // });
 	
 	$('a', $('#score')).on('click', function(e) {
 		e.stopPropagation();
@@ -84,7 +93,7 @@ $(function() {
         function(){
             //询问是否关闭全部
             if (confirm("是否要关闭所有选项卡 ?")){
-                window.location.href='admin_main.html';
+                window.location.href='student_main.html';
             }
         });
 
